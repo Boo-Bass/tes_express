@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 
-app.use("/elm", express.static("public"));
+app.use(express.static("public"));
 
 app.get("/", function(request, response){
      
     // отправляем ответ
     response.send(
-        new Date().toLocaleTimeString()
+        "Hello World!"
     );
 });
 app.get("/about", function(request, response){
